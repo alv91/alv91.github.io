@@ -29,3 +29,129 @@
 .footer {
   padding-top: 10px;
 }
+
+/* Hidden by default; shown only in print */
+.print-header { display: none; }
+
+/* Hero */
+.hero-tagline {
+  font-weight: 500;
+  color: #222;
+  margin: 0;
+}
+.hero-ctas .btn { margin-bottom: 6px; }
+
+.tech-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background-color: #f0f4ff;
+  color: #2a4fa5;
+  border: 1px solid #d8e2ff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .05s ease;
+}
+
+/* Tag color categories */
+.tag--platform {
+  background-color: #e8f0ff;
+  color: #1e3a8a;
+  border-color: #c7d7ff;
+}
+.tag--platform:hover { background-color: #dfe9ff; border-color: #b7cbff; }
+
+.tag--iac {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border-color: #e0c7ff;
+}
+.tag--iac:hover { background-color: #ecd9ff; border-color: #d2b5ff; }
+
+.tag--observability {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-color: #bbf7d0;
+}
+.tag--observability:hover { background-color: #d9faee; border-color: #96f2c7; }
+
+.tag--security {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+.tag--security:hover { background-color: #fdd6d6; border-color: #fbbebe; }
+
+.tech-tag:hover { transform: translateY(-1px); }
+
+/* Accessible focus styles for links and buttons */
+.resume a:focus-visible, .resume button:focus-visible {
+  outline: 2px solid #3c78d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Timeline styling for EXPERIENCE */
+.timeline { position: relative; padding-left: 0; }
+.timeline:before { display: none; }
+.timeline-item { position: relative; }
+.timeline-item:before { display: none; }
+/* Experience hover emphasis */
+.timeline:hover .timeline-item { opacity: 0.45; transition: opacity .15s ease; }
+.timeline .timeline-item:hover { opacity: 1; }
+/* Improved timeline alignment: line at the right edge of the date column (md+) */
+@media (min-width: 768px) {
+  .timeline-item > .col-md-3 {
+    position: relative;
+    border-right: 2px solid #e0e0e0;
+  }
+  .timeline-item > .col-md-3:after { display: none; }
+  .timeline-item > .col-md-9 { padding-left: 20px; }
+  /* Optional card feel for details */
+  .timeline-item > .col-md-9 { background: #fbfbfe; border-radius: 6px; transition: box-shadow .15s ease, background-color .15s ease; }
+  .timeline .timeline-item:hover > .col-md-9 { background: #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+}
+
+@media print {
+  /* Hide interactive-only elements when printing */
+  .toolbox, .footer-cover, .profile-img { display: none !important; }
+  .hero-ctas { display: none !important; }
+  .hero-tagline { display: none !important; }
+  /* Hide Medium in print */
+  .fa-medium { display: none !important; }
+  .fa-medium ~ .col-auto { display: none !important; }
+  .resume { padding: 0; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* Compact headings for print */
+  h1 { margin-bottom: 8px; }
+  h2 { margin-top: 12px; margin-bottom: 6px; }
+  .row.pt-5 { padding-top: 1rem !important; }
+  .row.pb-3 { padding-bottom: 0.5rem !important; }
+  /* Slightly smaller font size for print */
+  .resume { font-size: 12px; }
+  .tech-tag { font-size: 0.75rem; padding: 2px 7px; }
+  .resume .col-12.col-md-3 { padding-right: 10px; }
+  .resume .col-12.col-md-9 { padding-left: 10px; }
+  .resume .tech-cloud { margin-top: 4px; }
+
+  /* Print header on each page */
+  .print-header { display: none !important; }
+  @page {
+    margin: 0mm;
+  }
+  .ph-name { font-weight: 600; }
+  .ph-role { color: #444; }
+  .ph-contact a { color: #222; text-decoration: none; }
+
+  /* Section separators and spacing */
+  .print-separator { border-top: 1px solid #eee; }
+  .resume .row.pt-5 { padding-top: 1.4rem !important; }
+  .resume .row.pb-3 { padding-bottom: 0.8rem !important; }
+  hr { display: none !important; }
+}
