@@ -122,17 +122,15 @@
 
 /* Mobile spacing for EXPERIENCE timeline */
 @media (max-width: 767.98px) {
-  .timeline .timeline-item { padding: 12px 0; }
-  /* Force gutters on both columns (date/details) */
-  .timeline .timeline-item > .col-md-3,
-  .timeline .timeline-item > .col-md-9 { padding-left: 15px !important; padding-right: 15px !important; }
+  .timeline .timeline-item { padding: 14px 0; }
+  /* Force safe gutters on both columns (date/details), also when Bootstrap collapses md cols to full width */
+  .timeline .timeline-item > [class*="col-"] { padding-left: 16px !important; padding-right: 16px !important; }
   /* Date block on mobile */
-  .timeline .timeline-item > .col-md-3 { border-right: none; text-align: left !important; margin-bottom: 8px; }
+  .timeline .timeline-item > .text-md-right { text-align: left !important; margin-bottom: 10px; }
   /* Details block spacing */
-  .timeline .timeline-item > .col-md-9 { background: transparent; }
-  .timeline .timeline-item > .col-md-9 h4 { margin: 0 0 6px 0; }
-  .timeline .timeline-item > .col-md-9 i.gray { display: block; margin: 0 0 8px 0; }
-  .timeline .timeline-item > .col-md-9 ul { padding-top: 6px !important; margin-top: 0; }
+  .timeline .timeline-item h4 { margin: 0 0 8px 0; }
+  .timeline .timeline-item i.gray { display: block; margin: 0 0 10px 0; }
+  .timeline .timeline-item ul { padding-top: 6px !important; margin-top: 0; }
 }
 
 @media print {
