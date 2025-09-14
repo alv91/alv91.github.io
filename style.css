@@ -122,7 +122,7 @@
 
 /* Mobile spacing for EXPERIENCE timeline */
 @media (max-width: 767.98px) {
-  .timeline .timeline-item { padding: 14px 15px; }
+fix  .timeline .timeline-item { padding: 14px 0; }
   /* Reset any custom borders and ensure natural container padding */
   .timeline .timeline-item > .col-md-3 { border-right: none; }
   /* Date block on mobile */
