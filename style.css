@@ -100,7 +100,7 @@
 }
 
 /* Timeline styling for EXPERIENCE */
-.timeline { position: relative; padding-left: 0; }
+.timeline { position: relative; }
 .timeline:before { display: none; }
 .timeline-item { position: relative; }
 .timeline-item:before { display: none; }
@@ -122,9 +122,9 @@
 
 /* Mobile spacing for EXPERIENCE timeline */
 @media (max-width: 767.98px) {
-  .timeline .timeline-item { padding: 14px 0; }
-  /* Force safe gutters on both columns (date/details), also when Bootstrap collapses md cols to full width */
-  .timeline .timeline-item > [class*="col-"] { padding-left: 16px !important; padding-right: 16px !important; }
+  .timeline .timeline-item { padding: 14px 15px; }
+  /* Reset any custom borders and ensure natural container padding */
+  .timeline .timeline-item > .col-md-3 { border-right: none; }
   /* Date block on mobile */
   .timeline .timeline-item > .text-md-right { text-align: left !important; margin-bottom: 10px; }
   /* Details block spacing */
