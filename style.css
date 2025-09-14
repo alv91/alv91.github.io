@@ -40,6 +40,8 @@
   margin: 0;
 }
 .hero-ctas .btn { margin-bottom: 6px; }
+.hero-ctas .btn-outline-info { border-color: #3c78d8; color: #3c78d8; }
+.hero-ctas .btn-outline-info:hover { background-color: #3c78d8; color: #fff; }
 
 .tech-cloud {
   display: flex;
