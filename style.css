@@ -118,6 +118,16 @@
   .timeline .timeline-item:hover > .col-md-9 { background: #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
 }
 
+/* Mobile spacing for EXPERIENCE timeline */
+@media (max-width: 767.98px) {
+  .timeline .timeline-item { margin-top: 10px; }
+  .timeline-item > .col-12.text-md-right { margin-bottom: 8px; }
+  .timeline-item > .col-12:not(.text-md-right) { margin-top: 2px; }
+  .timeline-item > .col-md-9 { background: transparent; padding-left: 0; }
+  .timeline-item > .col-12 h4 { margin: 0 0 4px 0; }
+  .timeline-item > .col-12 i.gray { display: inline-block; margin-bottom: 6px; }
+}
+
 @media print {
   /* Hide interactive-only elements when printing */
   .toolbox, .footer-cover, .profile-img { display: none !important; }
