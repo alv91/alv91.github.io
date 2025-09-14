@@ -121,8 +121,11 @@
 /* Mobile spacing for EXPERIENCE timeline */
 @media (max-width: 767.98px) {
   .timeline .timeline-item { padding: 12px 0; }
-  .timeline .timeline-item > .col-12.text-md-right { text-align: left !important; margin-bottom: 6px; }
-  .timeline .timeline-item > .col-md-9 { background: transparent; padding-left: 0; }
+  /* Ensure comfortable horizontal padding on mobile */
+  .timeline .timeline-item > .col-12 { padding-left: 15px; padding-right: 15px; }
+  .timeline .timeline-item > .col-12.text-md-right { text-align: left !important; margin-bottom: 8px; }
+  /* Details block spacing */
+  .timeline .timeline-item > .col-md-9 { background: transparent; padding-left: 15px; }
   .timeline .timeline-item > .col-md-9 h4 { margin: 0 0 6px 0; }
   .timeline .timeline-item > .col-md-9 i.gray { display: block; margin: 0 0 8px 0; }
   .timeline .timeline-item > .col-md-9 ul { padding-top: 6px !important; margin-top: 0; }
