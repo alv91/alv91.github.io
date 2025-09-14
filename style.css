@@ -120,12 +120,12 @@
 
 /* Mobile spacing for EXPERIENCE timeline */
 @media (max-width: 767.98px) {
-  .timeline .timeline-item { margin-top: 10px; }
-  .timeline-item > .col-12.text-md-right { margin-bottom: 8px; }
-  .timeline-item > .col-12:not(.text-md-right) { margin-top: 2px; }
-  .timeline-item > .col-md-9 { background: transparent; padding-left: 0; }
-  .timeline-item > .col-12 h4 { margin: 0 0 4px 0; }
-  .timeline-item > .col-12 i.gray { display: inline-block; margin-bottom: 6px; }
+  .timeline .timeline-item { padding: 12px 0; }
+  .timeline .timeline-item > .col-12.text-md-right { text-align: left !important; margin-bottom: 6px; }
+  .timeline .timeline-item > .col-md-9 { background: transparent; padding-left: 0; }
+  .timeline .timeline-item > .col-md-9 h4 { margin: 0 0 6px 0; }
+  .timeline .timeline-item > .col-md-9 i.gray { display: block; margin: 0 0 8px 0; }
+  .timeline .timeline-item > .col-md-9 ul { padding-top: 6px !important; margin-top: 0; }
 }
 
 @media print {
